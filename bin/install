@@ -1,7 +1,11 @@
 #!/bin/bash
-# The vim_config directory needs to be in the $HOME directory. This script
-# moves and replaces the original .vim and .vimrc. It then installs Vundle so
-# that the plugins in the new .vimrc file an be downloaded.
+# This script moves and replaces the original .vim and .vimrc. It then installs
+# Vundle so that the plugins in the new .vimrc file can be downloaded.
+
+# Get the absolute path to our vimrc file.
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+vim_config_dir=${script_dir%/*}
+vimrc_path=${vim_config_dir%%/}/vimrc
 
 if [[ -d "$HOME/.vim" ]]; then
   mv $HOME/.vim $HOME/.vim-original
@@ -20,7 +24,8 @@ if [[ -e "$HOME/.vimrc" ]]; then
   echo Moved original .vimrc to .vimrc-original.
 fi
 
-ln -s $HOME/vim_config/vimrc ~/.vimrc
+# Create a symbolic link file with our vimrc in the root.
+ln -s $vimrc_path $HOME/.vimrc
 echo Created new .vimrc file.
 
 vim +PluginInstall +qa
