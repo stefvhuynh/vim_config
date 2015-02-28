@@ -1,5 +1,27 @@
 #!/bin/bash
+# The vim_config directory needs to be in the $HOME directory. This script
+# moves and replaces the original .vim and .vimrc. It then installs Vundle so
+# that the plugins in the new .vimrc file an be downloaded.
 
-cd ~/.vim
-[[ -h "$HOME/.vimrc" ]] || ln -s ~/.vim/vimrc ~/.vimrc
-vim +qa
+if [[ -d "$HOME/.vim" ]]; then
+  mv $HOME/.vim $HOME/.vim-original
+  echo Moved original .vim to .vim-original.
+fi
+
+mkdir $HOME/.vim
+mkdir $HOME/.vim/bundle
+echo Created new .vim directory.
+
+echo Installing Vundle...
+git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+
+if [[ -e "$HOME/.vimrc" ]]; then
+  mv $HOME/.vimrc $HOME/.vimrc-original
+  echo Moved original .vimrc to .vimrc-original.
+fi
+
+ln -s $HOME/vim_config/vimrc ~/.vimrc
+echo Created new .vimrc file.
+
+vim +PluginInstall +qa
+echo Installed vim plugins.
