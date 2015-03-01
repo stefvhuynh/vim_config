@@ -41,6 +41,8 @@ set numberwidth=4
 set visualbell t_vb=
 set colorcolumn=80
 highlight colorColumn ctermbg=8
+set foldcolumn=1
+set foldmethod=indent
 
 " Use spaces for tabs.
 set expandtab
@@ -51,17 +53,14 @@ execute "set softtabstop=".tabsize
 " Make backspace behave normally.
 set backspace=2
 
+" Save folds when leaving buffers.
+autocmd BufWinLeave * mkview
+autocmd BufWinEnter * silent loadview
+
 " Toggle relative line number setting.
 function ToggleLineNumbers()
-  if &number
-    set nonumber
-    set relativenumber
-  elseif &relativenumber
-    set norelativenumber
-    set number
-  else
-    set number
-  endif
+  set number!
+  set relativenumber!
 endfunction
 
 nnoremap <leader>n :call ToggleLineNumbers()<cr>
@@ -84,8 +83,8 @@ noremap <leader>r :register<cr>
 " Add newlines in normal mode without going into insert mode.
 nnoremap <cr> o<esc>
 
-" Faster auto-indent.
-nnoremap <leader>= gg=G<cr>
+" Auto-indent and return to original location.
+nnoremap <leader>= gg=G<cr><c-o><c-o>
 
 
 " Mappings For Plugins
