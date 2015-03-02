@@ -107,6 +107,9 @@ nnoremap <cr> o<esc>
 " Auto-indent and return to original location.
 nnoremap <leader>= gg=G<cr><c-o><c-o>
 
+" Faster tab creation.
+nnoremap <leader>t :tabnew<cr>
+
 
 " Plugin Customization
 " --------------------
@@ -141,3 +144,9 @@ nmap <leader>{ ysiW{
 nmap <leader>} ysiW}
 nmap <leader>< ysiW<
 nmap <leader>> ysiW>
+
+" Convert from dot notation to bracket notation using vim-surround.
+nmap <leader>b ysiw]lysiw'F.xwe
+
+" Convert from bracket notation to dot notation using vim-surround.
+nmap <leader>d F[i.<esc>3lds'ds]e
