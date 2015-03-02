@@ -48,7 +48,7 @@ set showcmd
 set number
 set numberwidth=4
 set visualbell t_vb=
-set colorcolumn=80
+set colorcolumn=81
 set foldcolumn=1
 set foldmethod=indent
 set foldlevel=99
