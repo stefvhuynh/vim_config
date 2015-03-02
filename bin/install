@@ -14,6 +14,7 @@ fi
 
 mkdir $HOME/.vim
 mkdir $HOME/.vim/bundle
+mkdir $HOME/.vim/tmp
 echo Created new .vim directory.
 
 echo Installing Vundle...

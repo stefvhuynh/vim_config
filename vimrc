@@ -21,6 +21,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -33,10 +34,10 @@ filetype plugin indent on
 " Custom Settings
 " ---------------
 
-" Put swap files in a temporary directory in root.
+" Put swap files in a temporary directory in home or root.
 set swapfile
-set directory=~/.vim-tmp
-set backupdir=~/.vim-tmp
+set directory=$HOME/.vim/tmp
+set backupdir=$HOME/.vim/tmp
 
 " Use a more convenient leader key.
 let mapleader = ','
@@ -48,12 +49,15 @@ set number
 set numberwidth=4
 set visualbell t_vb=
 set colorcolumn=80
-highlight colorColumn ctermbg=8
 set foldcolumn=1
 set foldmethod=indent
 set foldlevel=99
+
+" Highlight search results.
 set hls
-colorscheme Tomorrow-Night
+
+" Don't show an error if this colorscheme does not exist.
+silent! colorscheme Tomorrow-Night
 
 " Use spaces for tabs.
 set expandtab
