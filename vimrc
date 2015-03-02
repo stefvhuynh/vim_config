@@ -136,6 +136,7 @@ nnoremap <leader>f :CtrlP<cr>
 " Faster delimiter insertions with vim-surround.
 nmap <leader>" ysiW"
 nmap <leader>' ysiW'
+nmap <leader>` ysiW`
 nmap <leader>( ysiW(
 nmap <leader>) ysiW)
 nmap <leader>[ ysiW[
