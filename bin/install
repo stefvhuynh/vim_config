@@ -7,24 +7,18 @@ script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 vim_config_dir=${script_dir%/*}
 vimrc_path=${vim_config_dir%%/}/vimrc
 
-if [[ -e "$HOME/.vimrc" ]]; then
-  if [[ -e "$HOME/.vimrc-original" ]]; then
-    echo .vimrc-original already exists! Move it before installing.
+if [[ -e "$HOME/.vimrc-original" || -e "$HOME/.vim-original" ]]; then
+    echo .vimrc-original or .vim-original already exist!
+    echo Move them before installing.
     exit
-  fi
+fi
 
+if [[ -e "$HOME/.vimrc" ]]; then
   mv $HOME/.vimrc $HOME/.vimrc-original
   echo Moved original .vimrc to .vimrc-original.
 fi
 
 if [[ -d "$HOME/.vim" ]]; then
-  if [[ -d "$HOME/.vim-original" ]]; then
-    mv $HOME/.vimrc-original $HOME/.vimrc
-    echo .vim-original already exists! Move it before installing.
-    echo Moved .vimrc-original back to .vimrc.
-    exit
-  fi
-
   mv $HOME/.vim $HOME/.vim-original
   echo Moved original .vim to .vim-original.
 fi
@@ -33,6 +27,7 @@ fi
 ln -s $vimrc_path $HOME/.vimrc
 echo Created new .vimrc file.
 
+# Set up .vim folder with bundle for Vundle and tmp for swap files.
 mkdir $HOME/.vim
 mkdir $HOME/.vim/bundle
 mkdir $HOME/.vim/tmp
@@ -40,6 +35,9 @@ echo Created new .vim directory.
 
 echo Installing Vundle...
 git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+echo Finished installing Vundle.
 
+echo Installing vim plugins...
 vim +PluginInstall +qa
-echo Installed vim plugins.
+
+echo Finished installing vim plugins.
