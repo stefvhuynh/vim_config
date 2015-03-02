@@ -21,6 +21,9 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " Finish vundle.
 call vundle#end()
@@ -30,8 +33,13 @@ filetype plugin indent on
 " Custom Settings
 " ---------------
 
+" Put swap files in a temporary directory in root.
+set swapfile
+set directory=~/.vim-tmp
+set backupdir=~/.vim-tmp
+
 " Use a more convenient leader key.
-let mapleader = ","
+let mapleader = ','
 
 " General display settings.
 syntax on
@@ -43,19 +51,25 @@ set colorcolumn=80
 highlight colorColumn ctermbg=8
 set foldcolumn=1
 set foldmethod=indent
+set foldlevel=99
+set hls
+colorscheme Tomorrow-Night
 
 " Use spaces for tabs.
 set expandtab
-execute "set tabstop=".tabsize
-execute "set shiftwidth=".tabsize
-execute "set softtabstop=".tabsize
+execute 'set tabstop='.tabsize
+execute 'set shiftwidth='.tabsize
+execute 'set softtabstop='.tabsize
 
 " Make backspace behave normally.
 set backspace=2
 
 " Save folds when leaving buffers.
-autocmd BufWinLeave * mkview
-autocmd BufWinEnter * silent loadview
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
+" Reload vimrc while editing in vim.
+nnoremap <leader>v :source $MYVIMRC<cr>
 
 " Toggle relative line number setting.
 function ToggleLineNumbers()
@@ -74,6 +88,9 @@ nnoremap <c-l> <c-w>l
 " Faster escaping out of insert mode.
 inoremap jk <esc>
 
+" Turn off highlighted text faster.
+nnoremap <space> :nohl<cr>
+
 " Faster search and replace.
 nnoremap <leader>s :%s/
 
@@ -87,8 +104,11 @@ nnoremap <cr> o<esc>
 nnoremap <leader>= gg=G<cr><c-o><c-o>
 
 
-" Mappings For Plugins
+" Plugin Customization
 " --------------------
+
+" Show jsx syntax highlighting in js files with vim-jsx..
+let g:jsx_ext_required=0
 
 " Automatically enable autosave using vim-auto-save.
 let g:auto_save = 1
