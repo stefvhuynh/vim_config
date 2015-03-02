@@ -107,13 +107,13 @@ vmap <leader>/ <leader>c<space>
 nnoremap <leader>f :CtrlP<cr>
 
 " Faster delimiter insertions with vim-surround.
-nmap <leader>" ysiw"
-nmap <leader>' ysiw'
-nmap <leader>( ysiw(
-nmap <leader>) ysiw)
-nmap <leader>[ ysiw[
-nmap <leader>] ysiw]
-nmap <leader>{ ysiw{
-nmap <leader>} ysiw}
-nmap <leader>< ysiw<
-nmap <leader>> ysiw>
+nmap <leader>" ysiW"
+nmap <leader>' ysiW'
+nmap <leader>( ysiW(
+nmap <leader>) ysiW)
+nmap <leader>[ ysiW[
+nmap <leader>] ysiW]
+nmap <leader>{ ysiW{
+nmap <leader>} ysiW}
+nmap <leader>< ysiW<
+nmap <leader>> ysiW>
