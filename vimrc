@@ -115,6 +115,9 @@ nnoremap <leader>= gg=G<cr><c-o><c-o>
 " Faster tab creation.
 nnoremap <leader>t :tabnew<cr>
 
+" Convert html one-liners to three lines.
+nnoremap <leader>h f>li<cr><esc>f<i<cr><esc>
+
 
 " Plugin Customization
 " --------------------
@@ -151,8 +154,8 @@ nmap <leader>} ysiW}
 nmap <leader>< ysiW<
 nmap <leader>> ysiW>
 
-" Convert from dot notation to bracket notation using vim-surround.
-nmap <leader>b ysiw]lysiw'F.xwe
-
 " Convert from bracket notation to dot notation using vim-surround.
 nmap <leader>d F[i.<esc>3lds'ds]e
+
+" Convert from dot notation to bracket notation using vim-surround.
+nmap <leader>D ysiw]lysiw'F.xwe
