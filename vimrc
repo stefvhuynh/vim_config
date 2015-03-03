@@ -2,7 +2,7 @@
 set nocompatible
 
 " Set the number of spaces used for tabs.
-let tabsize = 2
+let tabsize = 4
 
 
 " Vundle setup
@@ -23,6 +23,8 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'rking/ag.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -53,6 +55,8 @@ set colorcolumn=81
 set foldcolumn=1
 set foldmethod=indent
 set foldlevel=99
+set listchars=trail:·
+set list
 
 " Highlight search results.
 set hls
