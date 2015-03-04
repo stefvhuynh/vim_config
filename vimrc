@@ -64,9 +64,12 @@ set foldmethod=indent
 set foldlevel=99
 set listchars=trail:·
 set list
+set scrolloff=5
+set laststatus=2
+set statusline=%f\ [%L\ lines]
 
 " Highlight search results.
-set hls
+set hlsearch incsearch
 
 " Don't show an error if this colorscheme does not exist.
 silent! colorscheme Tomorrow-Night
@@ -88,7 +91,7 @@ autocmd BufWinEnter *.* silent loadview
 nnoremap <leader>v :source $MYVIMRC<cr>
 
 " Toggle relative line number setting.
-function ToggleLineNumbers()
+function! ToggleLineNumbers()
   set number!
   set relativenumber!
 endfunction
@@ -104,8 +107,8 @@ nnoremap <c-l> <c-w>l
 " Faster escaping out of insert mode.
 inoremap jk <esc>
 
-" Turn off highlighted text faster.
-nnoremap <space> :nohl<cr>
+" Turn off highlighted text faster by resetting the search term to nothing.
+nnoremap <space> :let @/=""<cr>
 
 " Faster search and replace.
 nnoremap <leader>s :%s/
@@ -125,6 +128,31 @@ nnoremap <leader>t :tabnew<cr>
 " Convert html one-liners to three lines.
 nnoremap <leader>h f>li<cr><esc>f<i<cr><esc>
 
+" Convert one-line hash to multiple lines.
+"function! ToMultiLineHash()
+  "execute "normal! F{li\<cr>\<esc>EE"
+
+  "while getline(".")[col(".") - 1] == ","
+    "execute "normal! li\<cr>\<esc>EE"
+  "endwhile
+
+  "execute "normal! li\<cr>\<esc>"
+"endfunction
+
+"nnoremap <leader>o :call ToMultiLineHash()<cr>
+
+"function! DeleteToPreviousLine()
+  "while getline(".")[col(".") - 1] == " "
+    "execute "normal! li\<bs>\<esc>"
+  "endwhile
+
+  "execute "normal! i\<bs>\<space>\<esc>"
+"endfunction
+
+"function! ToSingleLineHash()
+  "execute "normal! /{\<cr>Nwh"
+  "DeleteToPreviousLIne()
+"endfunction
 
 " Plugin Customization
 " --------------------
