@@ -26,8 +26,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'rking/ag.vim'
 Plugin 'flazz/vim-colorschemes'
+
+" Javascript syntax.
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+
+" Less syntax.
+Plugin 'groenewege/vim-less'
 
 " Finish vundle.
 call vundle#end()
@@ -46,6 +51,8 @@ set backupdir=$HOME/.vim/tmp
 let mapleader = ','
 
 " General display settings.
+filetype off
+filetype on
 syntax on
 set showcmd
 set number
