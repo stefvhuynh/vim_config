@@ -21,3 +21,50 @@ $ path/to/vim_config/bin/restore
 You can add more vim configurations to the vimrc file in this repo, as the
 vimrc file in here will be symbolically linked to your local .vimrc file after
 running the install script.
+
+Custom Mappings
+---------------
+
+The `<leader>` key is set to a comma (`,`).
+
+```
+Command  Action
+-------  ------
+
+Normal mode:
+,v       Reload .vimrc
+,n       Toggle between relative and normal line numbering
+ctrl-j   Move down a screen
+ctrl-k   Move up a screen
+ctrl-h   Move left a screen
+ctrl-l   Move right a screen
+space    Turn off highlighting
+,s       Search and replace
+,r       Open delete/yank register
+enter    Add a newline
+,=       Auto-indent file
+,t       Create a new tab
+,h       Change an html one-liner to three lines (open tag - body - close tag)
+\        Open NERDTree
+,/       Toggle comments
+,f       Open CtrlP fuzzy file finder
+,"       Surround WORD with ""
+,'       Surround WORD with ''
+,`       Surround WORD with ``
+,(       Surround WORD with () and a space
+,)       Surround WORD with ()
+,[       Surround WORD with [] and a space
+,]       Surround WORD with []
+,{       Surround WORD with {} and a space
+,}       Surround WORD with {}
+,<       Surround WORD with <> and a space
+,>       Surround WORD with <>
+,d       Convert from bracket notation to dot notation
+,D       Convert from dot notation to bracket notation
+
+Visual mode:
+,/       Toggle comments
+
+Insert mode:
+jk       Exit insert mode
+```
