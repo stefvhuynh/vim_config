@@ -44,7 +44,8 @@ space    Turn off highlighting
 enter    Add a newline
 ,=       Auto-indent file
 ,t       Create a new tab
-,h       Change an html one-liner to three lines (open tag - body - close tag)
+,z       Change an html one-liner to three lines (open tag - body - close tag)
+,Z       Change an html three-liner to one line (open tag - body - close tag)
 ,o       Change a single line hash to multiple lines
 ,O       Change a multiple line hash to one line
 \        Open NERDTree

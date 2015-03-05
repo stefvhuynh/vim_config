@@ -2,7 +2,7 @@
 set nocompatible
 
 " Set the number of spaces used for tabs.
-let tabsize = 4
+let tabsize=4
 
 
 " Vundle setup
@@ -126,42 +126,20 @@ nnoremap <leader>= gg=G<cr><c-o><c-o>
 nnoremap <leader>t :tabnew<cr>
 
 " Convert html one-liners to three lines.
-nnoremap <leader>h f>li<cr><esc>f<i<cr><esc>
+nnoremap <leader>z f>li<cr><esc>f<i<cr><esc>kkl
 
-" Convert one-line hash to multiple lines.
-"function! ToMultiLineHash()
-  "execute "normal! F{li\<cr>\<esc>EE"
+" Convert html three-liners to one line.
+nnoremap <leader>Z j0wd0i<bs><esc>jBd0i<bs><esc>0w
 
-  "while getline(".")[col(".") - 1] == ","
-    "execute "normal! li\<cr>\<esc>EE"
-  "endwhile
-
-  "execute "normal! li\<cr>\<esc>"
-"endfunction
-
-"nnoremap <leader>o :call ToMultiLineHash()<cr>
-
-"function! DeleteToPreviousLine()
-  "while getline(".")[col(".") - 1] == " "
-    "execute "normal! li\<bs>\<esc>"
-  "endwhile
-
-  "execute "normal! i\<bs>\<space>\<esc>"
-"endfunction
-
-"function! ToSingleLineHash()
-  "execute "normal! /{\<cr>Nwh"
-  "DeleteToPreviousLIne()
-"endfunction
 
 " Plugin Customization
 " --------------------
 
-" Show jsx syntax highlighting in js files with vim-jsx..
+" Show jsx syntax highlighting in js files with vim-jsx.
 let g:jsx_ext_required=0
 
 " Automatically enable autosave using vim-auto-save.
-let g:auto_save = 1
+let g:auto_save=1
 
 " Show dotfiles in NERDTree.
 let g:NERDTreeShowHidden=1
