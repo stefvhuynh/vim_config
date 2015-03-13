@@ -24,8 +24,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'rking/ag.vim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'epmatsw/ag.vim'
 
 " Javascript syntax.
 Plugin 'pangloss/vim-javascript'
@@ -51,9 +51,9 @@ set backupdir=$HOME/.vim/tmp
 let mapleader = ','
 
 " General display settings.
+syntax on
 filetype off
 filetype on
-syntax on
 set showcmd
 set number
 set numberwidth=4
