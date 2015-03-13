@@ -25,7 +25,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'epmatsw/ag.vim'
+Plugin 'rking/ag.vim'
 
 " Javascript syntax.
 Plugin 'pangloss/vim-javascript'
@@ -172,3 +172,6 @@ nmap <leader>d F[i.<esc>3lds'ds]e
 
 " Convert from dot notation to bracket notation using vim-surround.
 nmap <leader>D ysiw]lysiw'F.xwe
+
+" Use ag.vim to search text under cursor.
+nnoremap <leader>S byw:Ag<space><c-r>"<bs><cr>
