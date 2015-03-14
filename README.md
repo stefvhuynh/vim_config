@@ -39,7 +39,10 @@ ctrl-k   Move up a screen
 ctrl-h   Move left a screen
 ctrl-l   Move right a screen
 space    Turn off highlighting
-,s       Search and replace
+,s       Search and replace in the file
+,f       Find the word under cursor in the file
+,S       Use Ag to search for a word in the cwd
+,F       Use Ag to search for the word under the cursor in the cwd
 ,r       Open delete/yank register
 enter    Add a newline
 ,=       Auto-indent file
@@ -50,7 +53,6 @@ enter    Add a newline
 ,O       Change a multiple line hash to one line
 \        Open NERDTree
 ,/       Toggle comments
-,f       Open CtrlP fuzzy file finder
 ,"       Surround WORD with ""
 ,'       Surround WORD with ''
 ,`       Surround WORD with ``

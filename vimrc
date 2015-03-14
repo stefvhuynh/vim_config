@@ -34,6 +34,9 @@ Plugin 'mxw/vim-jsx'
 " Less syntax.
 Plugin 'groenewege/vim-less'
 
+" Swift syntax.
+Plugin 'Keithbsmiley/swift.vim'
+
 " Finish vundle.
 call vundle#end()
 filetype plugin indent on
@@ -113,6 +116,9 @@ nnoremap <space> :let @/=""<cr>
 " Faster search and replace.
 nnoremap <leader>s :%s/
 
+" Search for word under cursor in the file.
+nnoremap <leader>f byw/<c-r>"<bs><cr>
+
 " Open the register faster.
 noremap <leader>r :register<cr>
 
@@ -151,9 +157,6 @@ nnoremap \ :NERDTree<cr>
 nmap <leader>/ <leader>c<space>
 vmap <leader>/ <leader>c<space>
 
-" Faster ctrlp for file searching.
-nnoremap <leader>f :CtrlP<cr>
-
 " Faster delimiter insertions with vim-surround.
 nmap <leader>" ysiW"
 nmap <leader>' ysiW'
@@ -173,5 +176,8 @@ nmap <leader>d F[i.<esc>3lds'ds]e
 " Convert from dot notation to bracket notation using vim-surround.
 nmap <leader>D ysiw]lysiw'F.xwe
 
+" Faster ag.vim search.
+nnoremap <leader>S :Ag<space>
+
 " Use ag.vim to search text under cursor.
-nnoremap <leader>S byw:Ag<space><c-r>"<bs><cr>
+nnoremap <leader>F byw:Ag<space><c-r>"<bs><cr>
