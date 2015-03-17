@@ -138,10 +138,10 @@ nnoremap <leader>z f>li<cr><esc>f<i<cr><esc>kkl
 nnoremap <leader>Z j0wd0i<bs><esc>jBd0i<bs><esc>0w
 
 " Uppercase word in insert mode.
-inoremap <c-f>U <esc>vbUA
+inoremap <c-f>U <esc>vbUea
 
 " Lowercase word in insert mode.
-inoremap <c-f>u <esc>vbuA
+inoremap <c-f>u <esc>vbuea
 
 
 " Plugin Customization
