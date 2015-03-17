@@ -25,7 +25,9 @@ running the install script.
 Custom Mappings
 ---------------
 
-The `<leader>` key is set to a comma (`,`).
+The `<leader>` key is set to comma (`,`). This is used to namespace custom
+commands in normal mode. The `f` key in conjunction with `ctrl` is used for
+namespacing custom commands in insert mode.
 
 ```
 Command  Action
@@ -72,4 +74,6 @@ Visual mode:
 
 Insert mode:
 jk       Exit insert mode
+ctrl-fU  Uppercase word
+ctrl-fu  Lowercase word
 ```
