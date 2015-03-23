@@ -2,7 +2,7 @@
 set nocompatible
 
 " Set the number of spaces used for tabs.
-let tabsize=4
+let tabsize=2
 
 
 " Vundle setup
@@ -138,10 +138,7 @@ nnoremap <leader>z f>li<cr><esc>f<i<cr><esc>kkl
 nnoremap <leader>Z j0wd0i<bs><esc>jBd0i<bs><esc>0w
 
 " Uppercase word in insert mode.
-inoremap <c-f>U <esc>vbUea
-
-" Lowercase word in insert mode.
-inoremap <c-f>u <esc>vbuea
+inoremap <c-f>u <esc>vbUea
 
 
 " Plugin Customization

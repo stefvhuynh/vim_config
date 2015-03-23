@@ -74,6 +74,5 @@ Visual mode:
 
 Insert mode:
 jk       Exit insert mode
-ctrl-fU  Uppercase word
-ctrl-fu  Lowercase word
+ctrl-fu  Uppercase word
 ```
