@@ -173,11 +173,18 @@ nmap <leader>} ysiW}
 nmap <leader>< ysiW<
 nmap <leader>> ysiW>
 
-" Convert from bracket notation to dot notation using vim-surround.
-nmap <leader>d F[i.<esc>3lds'ds]e
+" Toggle between dot and bracket notation using vim-surround.
+function! ToggleDotNotation()
+  execute "normal! bh"
 
-" Convert from dot notation to bracket notation using vim-surround.
-nmap <leader>D ysiw]lysiw'F.xwe
+  if getline(".")[col(".") - 1] == "."
+    execute "normal lysiw]lysiw'F.xwe"
+  else
+    execute "normal F[i.\<esc>3lds'ds]e"
+  endif
+endfunction
+
+nnoremap <leader>d :call ToggleDotNotation()<cr>
 
 " Faster ag.vim search.
 nnoremap <leader>S :Ag<space>

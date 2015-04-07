@@ -51,8 +51,6 @@ enter    Add a newline
 ,t       Create a new tab
 ,z       Change an html one-liner to three lines (open tag - body - close tag)
 ,Z       Change an html three-liner to one line (open tag - body - close tag)
-,o       Change a single line hash to multiple lines
-,O       Change a multiple line hash to one line
 \        Open NERDTree
 ,/       Toggle comments
 ,"       Surround WORD with ""
@@ -66,8 +64,7 @@ enter    Add a newline
 ,}       Surround WORD with {}
 ,<       Surround WORD with <> and a space
 ,>       Surround WORD with <>
-,d       Convert from bracket notation to dot notation
-,D       Convert from dot notation to bracket notation
+,d       Toggle between bracket notation and dot notation
 
 Visual mode:
 ,/       Toggle comments
