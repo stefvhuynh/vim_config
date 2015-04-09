@@ -68,6 +68,7 @@ enter    Add a newline
 
 Visual mode:
 ,/       Toggle comments
+,s       Search and replace in the file
 
 Insert mode:
 jk       Exit insert mode

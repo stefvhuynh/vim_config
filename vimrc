@@ -93,6 +93,9 @@ set backspace=2
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
+" Normal mode mappings
+" --------------------
+
 " Reload vimrc while editing in vim.
 nnoremap <leader>v :source $MYVIMRC<cr>
 
@@ -109,9 +112,6 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-
-" Faster escaping out of insert mode.
-inoremap jk <esc>
 
 " Turn off highlighted text faster by resetting the search term to nothing.
 nnoremap <space> :let @/=""<cr>
@@ -140,8 +140,20 @@ nnoremap <leader>z f>li<cr><esc>f<i<cr><esc>kkl
 " Convert html three-liners to one line.
 nnoremap <leader>Z j0wd0i<bs><esc>jBd0i<bs><esc>0w
 
-" Uppercase word in insert mode.
+" Insert mode mappings
+" --------------------
+
+" Faster escaping.
+inoremap jk <esc>
+
+" Uppercase word.
 inoremap <c-f>u <esc>vbUea
+
+" Visual mode mappings
+" --------------------
+
+" Faster search and replace.
+vnoremap <leader>s :s/
 
 
 " Plugin Customization
