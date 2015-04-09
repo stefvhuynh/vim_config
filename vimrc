@@ -37,6 +37,9 @@ Plugin 'groenewege/vim-less'
 " Swift syntax.
 Plugin 'Keithbsmiley/swift.vim'
 
+" Scala syntax.
+Plugin 'derekwyatt/vim-scala'
+
 " Finish vundle.
 call vundle#end()
 filetype plugin indent on
@@ -175,9 +178,9 @@ nmap <leader>> ysiW>
 
 " Toggle between dot and bracket notation using vim-surround.
 function! ToggleDotNotation()
-  execute "normal! bh"
+  execute 'normal! bh'
 
-  if getline(".")[col(".") - 1] == "."
+  if getline('.')[col('.') - 1] == '.'
     execute "normal lysiw]lysiw'F.xwe"
   else
     execute "normal F[i.\<esc>3lds'ds]e"
