@@ -72,7 +72,7 @@ set listchars=trail:·
 set list
 set scrolloff=5
 set laststatus=2
-set statusline=%f\ [%L\ lines]
+set statusline=%f\[%L\ lines]
 
 " Highlight search results.
 set hlsearch incsearch
@@ -168,6 +168,9 @@ let g:auto_save=1
 " Show dotfiles in NERDTree.
 let g:NERDTreeShowHidden=1
 
+" Put git information in status line.
+set statusline+=%{fugitive#statusline()}
+
 " Open NERDTree faster.
 nnoremap \ :NERDTree<cr>
 
@@ -191,7 +194,6 @@ nmap <leader>> ysiW>
 " Toggle between dot and bracket notation using vim-surround.
 function! ToggleDotNotation()
   execute 'normal! bh'
-
   if getline('.')[col('.') - 1] == '.'
     execute "normal lysiw]lysiw'F.xwe"
   else
