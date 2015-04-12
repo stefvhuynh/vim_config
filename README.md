@@ -66,7 +66,11 @@ enter    Add a newline
 ,>       Surround WORD with <>
 ,d       Toggle between bracket notation and dot notation
 ,gs      Runs git status command
-,gc      Run git commit command
+,ga      Runs git add <current-file> command
+,gc      Runs git commit command
+,gd      Runs git diff command
+,gb      Runs git blame command
+,gp      Runs git push command
 
 Visual mode:
 ,/       Toggle comments
