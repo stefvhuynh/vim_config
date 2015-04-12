@@ -65,6 +65,8 @@ enter    Add a newline
 ,<       Surround WORD with <> and a space
 ,>       Surround WORD with <>
 ,d       Toggle between bracket notation and dot notation
+,gs      Runs git status command
+,gc      Run git commit command
 
 Visual mode:
 ,/       Toggle comments

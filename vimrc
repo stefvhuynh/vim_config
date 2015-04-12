@@ -168,7 +168,7 @@ let g:auto_save=1
 " Show dotfiles in NERDTree.
 let g:NERDTreeShowHidden=1
 
-" Put git information in status line.
+" Put git information in status line with vim-fugitive.
 set statusline+=%{fugitive#statusline()}
 
 " Open NERDTree faster.
@@ -177,6 +177,10 @@ nnoremap \ :NERDTree<cr>
 " Faster NERDCommenter comment toggle in normal and visual modes.
 nmap <leader>/ <leader>c<space>
 vmap <leader>/ <leader>c<space>
+
+" Faster vim-fugitive commands.
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gc :Gcommit<cr>
 
 " Faster delimiter insertions with vim-surround.
 nmap <leader>" ysiW"
