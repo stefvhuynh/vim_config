@@ -1,10 +1,6 @@
 " Do not use vi default settings.
 set nocompatible
 
-" Set the number of spaces used for tabs.
-let tabsize=2
-
-
 " Vundle setup
 " ------------
 
@@ -85,9 +81,16 @@ silent! colorscheme Tomorrow-Night
 
 " Use spaces for tabs.
 set expandtab
-execute 'set tabstop='.tabsize
-execute 'set shiftwidth='.tabsize
-execute 'set softtabstop='.tabsize
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+
+" Use this function to change the tabsize in a live vim session.
+function! SetTabsize(tabsize)
+  execute 'set tabstop='.a:tabsize
+  execute 'set shiftwidth='.a:tabsize
+  execute 'set softtabstop='.a:tabsize
+endfunction
 
 " Make backspace behave normally.
 set backspace=2
