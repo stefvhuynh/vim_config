@@ -40,6 +40,9 @@ Plugin 'Keithbsmiley/swift.vim'
 " Scala syntax.
 Plugin 'derekwyatt/vim-scala'
 
+" Haskell syntax.
+Plugin 'raichoo/haskell-vim'
+
 " Finish vundle.
 call vundle#end()
 filetype plugin indent on
