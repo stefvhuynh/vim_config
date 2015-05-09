@@ -191,6 +191,7 @@ vmap <leader>/ <leader>c<space>
 " Faster vim-fugitive commands.
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>ga :Gwrite<cr>
+nnoremap <leader>gA :Git add -A<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gb :Gblame<cr>
