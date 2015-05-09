@@ -23,6 +23,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'rking/ag.vim'
 
+" Rails development.
+Plugin 'thoughtbot/vim-rspec'
+
 " Javascript syntax.
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -129,7 +132,7 @@ nnoremap <leader>s :%s/
 nnoremap <leader>f byw/<c-r>"<bs><cr>
 
 " Open the register faster.
-noremap <leader>r :register<cr>
+noremap <leader>y :register<cr>
 
 " Add newlines in normal mode without going into insert mode.
 nnoremap <cr> o<esc>
@@ -222,3 +225,12 @@ nnoremap <leader>S :Ag<space>
 
 " Use ag.vim to search text under cursor.
 nnoremap <leader>F byw:Ag<space><c-r>"<bs><cr>
+
+" Faster vim-rspec commands.
+nnoremap <leader>ra :call RunAllSpecs()<cr>
+nnoremap <leader>rc :call RunCurrentSpecFile()<cr>
+nnoremap <leader>rn :call RunNearestSpec()<cr>
+nnoremap <leader>rl :call RunLastSpec()<cr>
+
+" Use spring for rspec commands.
+let g:rspec_command='!spring rspec {spec}'

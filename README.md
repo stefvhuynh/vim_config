@@ -45,7 +45,7 @@ space    Turn off highlighting
 ,f       Find the word under cursor in the file
 ,S       Use Ag to search for a word in the cwd
 ,F       Use Ag to search for the word under the cursor in the cwd
-,r       Open delete/yank register
+,y       Open delete/yank register
 enter    Add a newline
 ,=       Auto-indent file
 ,t       Create a new tab
@@ -71,6 +71,10 @@ enter    Add a newline
 ,gd      Runs git diff command
 ,gb      Runs git blame command
 ,gp      Runs git push command
+,ra      Runs all Rspec specs
+,rc      Runs current Rspec file
+,rn      Runs nearest Rspec spec
+,rl      Runs most recent Rspec spec
 
 Visual mode:
 ,/       Toggle comments
