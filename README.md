@@ -67,6 +67,7 @@ enter    Add a newline
 ,d       Toggle between bracket notation and dot notation
 ,gs      Runs git status command
 ,ga      Runs git add <current-file> command
+,gA      Runs git add -A command
 ,gc      Runs git commit command
 ,gd      Runs git diff command
 ,gb      Runs git blame command
