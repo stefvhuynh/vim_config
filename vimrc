@@ -24,6 +24,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'rking/ag.vim'
 
 " Rails development.
+Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
 
 " Javascript syntax.
