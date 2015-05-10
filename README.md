@@ -69,6 +69,7 @@ enter    Add a newline
 ,ga      Runs git add <current-file> command
 ,gA      Runs git add -A command
 ,gc      Runs git commit command
+,gC      Runs git add -A and then git commit
 ,gd      Runs git diff command
 ,gb      Runs git blame command
 ,gp      Runs git push command

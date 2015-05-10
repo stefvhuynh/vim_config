@@ -191,11 +191,12 @@ vmap <leader>/ <leader>c<space>
 " Faster vim-fugitive commands.
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>ga :Gwrite<cr>
-nnoremap <leader>gA :Git add -A<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gp :Gpush<cr>
+nnoremap <leader>gA :Git add -A<cr>
+nmap <leader>gC <leader>gA<leader>gc
 
 " Faster delimiter insertions with vim-surround.
 nmap <leader>" ysiW"
