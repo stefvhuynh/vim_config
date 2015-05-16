@@ -25,8 +25,8 @@ running the install script.
 Custom Mappings
 ---------------
 
-The `<leader>` key is set to comma (`,`). This is used to namespace custom
-commands in normal mode. The `f` key in conjunction with `ctrl` is used for
+The `<leader>` key is set to the spacebar. This is used to namespace custom
+commands in normal mode. The spacebar in conjunction with `ctrl` is used for
 namespacing custom commands in insert mode.
 
 ```
@@ -34,55 +34,55 @@ Command  Action
 -------  ------
 
 Normal mode:
-,v       Reload .vimrc
-,n       Toggle between relative and normal line numbering
-ctrl-j   Move down a screen
-ctrl-k   Move up a screen
-ctrl-h   Move left a screen
-ctrl-l   Move right a screen
-space    Turn off highlighting
-,s       Search and replace in the file
-,f       Find the word under cursor in the file
-,S       Use Ag to search for a word in the cwd
-,F       Use Ag to search for the word under the cursor in the cwd
-,y       Open delete/yank register
-enter    Add a newline
-,=       Auto-indent file
-,t       Create a new tab
-,z       Change an html one-liner to three lines (open tag - body - close tag)
-,Z       Change an html three-liner to one line (open tag - body - close tag)
-\        Open NERDTree
-,/       Toggle comments
-,"       Surround WORD with ""
-,'       Surround WORD with ''
-,`       Surround WORD with ``
-,(       Surround WORD with () and a space
-,)       Surround WORD with ()
-,[       Surround WORD with [] and a space
-,]       Surround WORD with []
-,{       Surround WORD with {} and a space
-,}       Surround WORD with {}
-,<       Surround WORD with <> and a space
-,>       Surround WORD with <>
-,d       Toggle between bracket notation and dot notation
-,gs      Runs git status command
-,ga      Runs git add <current-file> command
-,gA      Runs git add -A command
-,gc      Runs git commit command
-,gC      Runs git add -A and then git commit
-,gd      Runs git diff command
-,gb      Runs git blame command
-,gp      Runs git push command
-,ra      Runs all Rspec specs
-,rc      Runs current Rspec file
-,rn      Runs nearest Rspec spec
-,rl      Runs most recent Rspec spec
+space-v       Reload .vimrc
+space-n       Toggle between relative and normal line numbering
+ctrl-j        Move down a screen
+ctrl-k        Move up a screen
+ctrl-h        Move left a screen
+ctrl-l        Move right a screen
+space         Turn off highlighting
+space-s       Search and replace in the file
+space-f       Find the word under cursor in the file
+space-S       Use Ag to search for a word in the cwd
+space-F       Use Ag to search for the word under the cursor in the cwd
+space-y       Open delete/yank register
+enter         Add a newline
+space-=       Auto-indent file
+space-t       Create a new tab
+space-z       Change an html one-liner to three lines (open tag - body - close tag)
+space-Z       Change an html three-liner to one line (open tag - body - close tag)
+\             Open NERDTree
+space-/       Toggle comments
+space-"       Surround WORD with ""
+space-'       Surround WORD with ''
+space-`       Surround WORD with ``
+space-(       Surround WORD with () and a space
+space-)       Surround WORD with ()
+space-[       Surround WORD with [] and a space
+space-]       Surround WORD with []
+space-{       Surround WORD with {} and a space
+space-}       Surround WORD with {}
+space-<       Surround WORD with <> and a space
+space->       Surround WORD with <>
+space-d       Toggle between bracket notation and dot notation
+space-gs      Runs git status command
+space-ga      Runs git add <current-file> command
+space-gA      Runs git add -A command
+space-gc      Runs git commit command
+space-gC      Runs git add -A and then git commit
+space-gd      Runs git diff command
+space-gb      Runs git blame command
+space-gp      Runs git push command
+space-ra      Runs all Rspec specs
+space-rc      Runs current Rspec file
+space-rn      Runs nearest Rspec spec
+space-rl      Runs most recent Rspec spec
 
 Visual mode:
-,/       Toggle comments
-,s       Search and replace in the file
+space-/       Toggle comments
+space-s       Search and replace in the file
 
 Insert mode:
-jk       Exit insert mode
-ctrl-fu  Uppercase word
+jk            Exit insert mode
+ctrl-space-u  Uppercase word
 ```

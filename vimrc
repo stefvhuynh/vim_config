@@ -57,7 +57,7 @@ set directory=$HOME/.vim/tmp
 set backupdir=$HOME/.vim/tmp
 
 " Use a more convenient leader key.
-let mapleader = ','
+let mapleader=' '
 
 " General display settings.
 syntax on
@@ -124,7 +124,7 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 " Turn off highlighted text faster by resetting the search term to nothing.
-nnoremap <space> :let @/=""<cr>
+nnoremap <leader>h :let @/=""<cr>
 
 " Faster search and replace.
 nnoremap <leader>s :%s/
@@ -156,8 +156,8 @@ nnoremap <leader>Z j0wd0i<bs><esc>jBd0i<bs><esc>0w
 " Faster escaping.
 inoremap jk <esc>
 
-" Uppercase word.
-inoremap <c-f>u <esc>vbUea
+" Uppercase word. This is any null character, but we will use ctrl-space.
+inoremap <NUL>u <esc>vbUea
 
 " Visual mode mappings
 " --------------------
@@ -185,8 +185,8 @@ set statusline+=%{fugitive#statusline()}
 nnoremap \ :NERDTree<cr>
 
 " Faster NERDCommenter comment toggle in normal and visual modes.
-nmap <leader>/ <leader>c<space>
-vmap <leader>/ <leader>c<space>
+nmap <leader>/ <leader>ci
+vmap <leader>/ <leader>ci
 
 " Faster vim-fugitive commands.
 nnoremap <leader>gs :Gstatus<cr>
