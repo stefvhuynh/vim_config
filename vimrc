@@ -199,17 +199,17 @@ nnoremap <leader>gA :Git add -A<cr>
 nmap <leader>gC <leader>gA<leader>gc
 
 " Faster delimiter insertions with vim-surround.
-nmap <leader>" ysiW"
-nmap <leader>' ysiW'
-nmap <leader>` ysiW`
-nmap <leader>( ysiW(
-nmap <leader>) ysiW)
-nmap <leader>[ ysiW[
-nmap <leader>] ysiW]
-nmap <leader>{ ysiW{
-nmap <leader>} ysiW}
-nmap <leader>< ysiW<
-nmap <leader>> ysiW>
+nmap <leader>" ysiw"
+nmap <leader>' ysiw'
+nmap <leader>` ysiw`
+nmap <leader>( ysiw(
+nmap <leader>) ysiw)
+nmap <leader>[ ysiw[
+nmap <leader>] ysiw]
+nmap <leader>{ ysiw{
+nmap <leader>} ysiw}
+nmap <leader>< ysiw<
+nmap <leader>> ysiw>
 
 " Toggle between dot and bracket notation using vim-surround.
 function! ToggleDotNotation()
