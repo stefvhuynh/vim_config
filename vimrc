@@ -9,7 +9,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Plugins from github.
+" General purpose plugins.
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'scrooloose/nerdtree'
@@ -22,6 +22,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'rking/ag.vim'
+Plugin 'jgdavey/tslime.vim'
 
 " Rails development.
 Plugin 'tpope/vim-rails'
@@ -236,4 +237,4 @@ nnoremap <leader>rn :call RunNearestSpec()<cr>
 nnoremap <leader>rl :call RunLastSpec()<cr>
 
 " Use spring for rspec commands.
-let g:rspec_command='!spring rspec {spec}'
+let g:rspec_command='call Send_to_Tmux("spring rspec {spec}\n")'
