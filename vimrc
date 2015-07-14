@@ -175,6 +175,7 @@ let g:jsx_ext_required=0
 
 " Automatically enable autosave using vim-auto-save.
 let g:auto_save=1
+let g:auto_save_in_insert_mode=0
 
 " Show dotfiles in NERDTree.
 let g:NERDTreeShowHidden=1
