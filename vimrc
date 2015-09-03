@@ -68,7 +68,6 @@ set showcmd
 set number
 set numberwidth=4
 set visualbell t_vb=
-set colorcolumn=81
 set foldcolumn=1
 set foldmethod=indent
 set foldlevel=99
@@ -77,6 +76,13 @@ set list
 set scrolloff=5
 set laststatus=2
 set statusline=%f\[%L\ lines]
+
+" If on vim 7.3+, use the colorcolumn; otherwise, use error highlighting.
+if exists('+colorcolumn')
+  set colorcolumn=81
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 
 " Highlight search results.
 set hlsearch incsearch
