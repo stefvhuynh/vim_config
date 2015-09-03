@@ -197,14 +197,14 @@ nmap <leader>/ <leader>ci
 vmap <leader>/ <leader>ci
 
 " Faster vim-fugitive commands.
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>ga :Gwrite<cr>
-nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gb :Gblame<cr>
-nnoremap <leader>gp :Gpush<cr>
-nnoremap <leader>gA :Git add -A<cr>
-nmap <leader>gC <leader>gA<leader>gc
+nnoremap gs :Gstatus<cr>
+nnoremap ga :Gwrite<cr>
+nnoremap gc :Gcommit<cr>
+nnoremap gd :Gdiff<cr>
+nnoremap gb :Gblame<cr>
+nnoremap gp :Gpush<cr>
+nnoremap gA :Git add -A<cr>
+nmap gC <leader>gA<leader>gc
 
 " Faster delimiter insertions with vim-surround.
 nmap <leader>" ysiw"
@@ -233,6 +233,9 @@ nnoremap <leader>d :call ToggleDotNotation()<cr>
 
 " Faster ag.vim search.
 nnoremap <leader>S :Ag<space>
+
+" Faster vimgrep search.
+nnoremap <leader>G :vimgrep<space>
 
 " Use ag.vim to search text under cursor.
 nnoremap <leader>F byw:Ag<space><c-r>"<bs><cr>
