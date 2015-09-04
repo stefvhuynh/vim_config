@@ -22,6 +22,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'rking/ag.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'jgdavey/tslime.vim'
 
 " Rails development.
