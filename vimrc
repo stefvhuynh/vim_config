@@ -249,3 +249,6 @@ nnoremap <leader>rl :call RunLastSpec()<cr>
 
 " Use spring for rspec commands.
 let g:rspec_command='call Send_to_Tmux("spring rspec {spec}\n")'
+
+" Remove the default `-s` option for ack version < 2.0.
+let g:ack_default_options=' -H --nocolor --nogroup --column'
