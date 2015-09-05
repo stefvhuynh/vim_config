@@ -82,7 +82,7 @@ set statusline=%f\[%L\ lines]
 if exists('+colorcolumn')
   set colorcolumn=81
 else
-  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%81v.', -1)
 endif
 
 " Highlight search results.
@@ -235,8 +235,8 @@ nnoremap <leader>d :call ToggleDotNotation()<cr>
 " Faster ag.vim search.
 nnoremap <leader>S :Ag<space>
 
-" Faster vimgrep search.
-nnoremap <leader>G :vimgrep<space>
+" Faster ack.vim search.
+nnoremap <leader>G :Ack<space>
 
 " Use ag.vim to search text under cursor.
 nnoremap <leader>F byw:Ag<space><c-r>"<bs><cr>
