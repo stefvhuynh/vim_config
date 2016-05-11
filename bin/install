@@ -5,7 +5,7 @@
 # Get the absolute path to our vimrc file.
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 vim_config_dir="${script_dir%/*}"
-vimrc_path="${vim_config_dir%%/}/vimrc"
+vimrc_path="${vim_config_dir%%/}/.vimrc"
 
 if [[ -e "$HOME/.vimrc-original" || -e "$HOME/.vim-original" ]]; then
     echo ".vimrc-original or .vim-original already exist!"
@@ -23,7 +23,7 @@ if [[ -d "$HOME/.vim" ]]; then
   echo "Moved original .vim to .vim-original."
 fi
 
-# Create a symbolic link file with our vimrc in the root.
+# Create a symbolic link file with our .vimrc in the root.
 ln -s "$vimrc_path" "$HOME/.vimrc"
 echo "Created new .vimrc file."
 
