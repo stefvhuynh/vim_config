@@ -33,6 +33,9 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
+" Elm syntax.
+Plugin 'lambdatoast/elm.vim'
+
 " Less syntax.
 Plugin 'groenewege/vim-less'
 
